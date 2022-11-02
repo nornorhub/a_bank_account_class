@@ -11,7 +11,7 @@
 // ****************************************************************
 
 package account;
- 
+
 
 public class ManageAccounts {
 
@@ -23,39 +23,39 @@ public class ManageAccounts {
 
       acct1 = new Account(1000, "Sally", 1111);
  
-      System.out.println(acct1.toString());
-
       //create account2 for Joe with $500
 
- 
-
+      acct2 = new Account(500, "Jpe", 1112);
+      
       //deposit $100 to Joe's account
 
- 
+      acct2.deposit(100);
 
       //print Joe's new balance (use getBalance())
 
- 
+      System.out.println(acct2.getBalance());
 
       //withdraw $50 from Sally's account
 
- 
+      acct1.withdraw(50);
 
       //print Sally's new balance (use getBalance())
 
- 
+      System.out.println(acct1.getBalance());
 
       //charge fees to both accounts
 
- 
+      System.out.println("Sally's balance after fee: " + acct1.chargeFee());
+      System.out.println("Joe's balance after fee: " + acct2.chargeFee());
 
       //change the name on Joe's account to Joseph
 
- 
+      acct2.changeName("Joseph");
 
       //print summary for both accounts
-
- 
+      
+      System.out.println(acct1.toString());
+      System.out.println(acct2.toString());
 
     }
 
