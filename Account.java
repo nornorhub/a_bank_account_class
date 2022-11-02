@@ -82,9 +82,9 @@ public class Account {
 
   //----------------------------------------------
 
-  public void chargeFee() {
-
-  
+  public double chargeFee() {
+      balance -= 10;
+      return balance;
   }
 
   //----------------------------------------------
@@ -94,7 +94,7 @@ public class Account {
   //----------------------------------------------
 
   public void changeName(String newName) {
-
+      name = newName;
  
   }
 
